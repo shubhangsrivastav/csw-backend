@@ -239,7 +239,9 @@ for(let i=0;i<purchasedIds.length;i++){
 }
 res.json({purchasedCourses:purchasedCourses});
 });
-
+app.get("/health", async (req: Request, res: Response) => {
+  res.send({ message: "health OK!" });
+});
 
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
